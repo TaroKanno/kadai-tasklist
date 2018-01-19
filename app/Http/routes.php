@@ -25,5 +25,5 @@ Route::post('login', 'Auth\AuthController@postLogin')->name('login.post');
 Route::get('logout', 'Auth\AuthController@getLogout')->name('logout.get');
 
  Route::group(['middleware' => 'auth'], function () {
-    Route::resource('tasks', 'TasksController', ['only' => ['show', 'edit', 'create']]);
+    Route::resource('tasks', 'TasksController');
 });
