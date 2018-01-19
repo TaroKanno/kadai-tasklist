@@ -28,7 +28,9 @@
         @endif
         
         {!! link_to_route('tasks.create', 'タスクの追加', null, ['class' => 'btn btn-primary']) !!}
+        
     @else
+    
         <h1>タスク一覧</h1>
         
         @if (count($tasks) > 0)
